@@ -1,0 +1,8 @@
+<div *ngFor="let message of messages">
+    {{message}}
+</div>
+
+<form action="" [formGroup]="forms" (ngSubmit)="onSubmit()">
+    <input type="text" formControlName="message">
+    <button type="submit">Envoyer</button>
+</form>
