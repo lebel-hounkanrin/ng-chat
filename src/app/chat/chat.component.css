@@ -1,0 +1,25 @@
+form { 
+    background: rgb(53, 230, 47);
+    padding: 0.25rem; 
+    position: fixed; bottom: 0; left: 0; right: 0; 
+    display: flex;
+    height: 3rem;
+    box-sizing: border-box; backdrop-filter: blur(10px); 
+}
+input { 
+    border: none;
+    padding: 0 1rem; 
+    flex-grow: 1; border-radius: 2rem;
+    margin: 0.25rem;
+}
+input:focus { outline: none; }
+form > button {
+    background: rgb(250, 250, 250); 
+    border: none;
+    padding: 0 1rem; margin: 0.25rem; border-radius: 3px;
+    outline: none; color: #fff;
+    color: black;
+}
+.sender{
+    background: rgb(94, 216, 90); 
+}

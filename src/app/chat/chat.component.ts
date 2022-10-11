@@ -8,19 +8,23 @@ import { ChatService } from './chat.service';
   styleUrls: ['./chat.component.css']
 })
 export class ChatComponent implements OnInit {
-  messages: any[] = []
+  data: any[] = [];
+
   constructor(
     private chatService: ChatService,
     private formBuilder: FormBuilder
   ) { }
   ngOnInit(): void {
-    this.chatService.getMessage().subscribe(data => this.messages.push(data))
+    this.chatService.getMessage().subscribe(message => {
+      this.data.push(message)
+    })
   }
+
   forms = this.formBuilder.group({
     message: ""
   });
+
   onSubmit(){
-    console.log(this.forms.value)
     this.chatService.sendMessage(this.forms.value);
     this.forms.reset()
   }

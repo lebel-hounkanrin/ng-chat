@@ -1,5 +1,7 @@
-<div *ngFor="let message of messages">
-    {{message}}
+<div *ngFor="let data of data, let i='index'" class="chatbody">
+    <div [ngClass]="{'sender': i%2==0}">
+    {{data["message"]}}
+    </div>
 </div>
 
 <form action="" [formGroup]="forms" (ngSubmit)="onSubmit()">
