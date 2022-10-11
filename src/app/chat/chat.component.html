@@ -1,6 +1,6 @@
-<div *ngFor="let data of data" class="chatbody">
-    <div class="sender">
-        {{data["message"]}}
+<div *ngFor="let data of data, let i='index'" class="chatbody">
+    <div [ngClass]="{'sender': i%2==0}">
+    {{data["message"]}}
     </div>
 </div>
 

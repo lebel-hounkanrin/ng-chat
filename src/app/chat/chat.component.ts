@@ -9,16 +9,14 @@ import { ChatService } from './chat.service';
 })
 export class ChatComponent implements OnInit {
   data: any[] = [];
-  senderId:any = "";
+
   constructor(
     private chatService: ChatService,
     private formBuilder: FormBuilder
   ) { }
   ngOnInit(): void {
     this.chatService.getMessage().subscribe(message => {
-      console.log(message)
       this.data.push(message)
-      console.log(this.data)
     })
   }
 
@@ -27,7 +25,7 @@ export class ChatComponent implements OnInit {
   });
 
   onSubmit(){
-    this.senderId = this.chatService.sendMessage(this.forms.value);
+    this.chatService.sendMessage(this.forms.value);
     this.forms.reset()
   }
   

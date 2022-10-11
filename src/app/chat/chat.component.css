@@ -20,4 +20,6 @@ form > button {
     outline: none; color: #fff;
     color: black;
 }
-
+.sender{
+    background: rgb(94, 216, 90); 
+}
