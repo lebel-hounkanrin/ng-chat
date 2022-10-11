@@ -1,8 +1,5 @@
 <div *ngFor="let data of data" class="chatbody">
-    <div *ngIf="data['userId'] == sender_id" class="sender">
-        {{data["message"]}}
-    </div>
-    <div *ngIf="data['userId'] !== sender_id" class="receiver">
+    <div class="sender">
         {{data["message"]}}
     </div>
 </div>
